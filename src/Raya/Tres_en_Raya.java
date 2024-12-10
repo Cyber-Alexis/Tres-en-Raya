@@ -23,7 +23,11 @@ public class Tres_en_Raya {
         System.out.print("¿Cómo te llamas, jugador 1?: ");
         j1 = x.nextLine();
         System.out.print("¿Cómo te llamas, jugador 2?: ");
-        j2 = x.nextLine();
-		        
+        j2 = x.nextLine();		        
+     
+        // Decidir quién empieza
+        System.out.println("Lanzaremos la moneda");
+        turno = r.nextInt(2) + 1; 
+        System.out.println(turno == 1 ? "Empezaremos con " + j1 + "" : "Empezaremos con " + j2 + "");
 	}
 }
