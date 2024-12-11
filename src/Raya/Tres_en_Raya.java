@@ -1,5 +1,8 @@
 package Raya;
 
+import java.util.Scanner;
+import java.util.Random;
+
 public class Tres_en_Raya {
 
 	public static void main(String[] args) {
@@ -29,5 +32,18 @@ public class Tres_en_Raya {
         System.out.println("Lanzaremos la moneda");
         turno = r.nextInt(2) + 1; 
         System.out.println(turno == 1 ? "Empezaremos con " + j1 + "" : "Empezaremos con " + j2 + "");
+        
+        // Este bucle sera el principal del juego
+        while (jugadas < 9 && ganador == 0) {
+            System.out.println("\n=== Tablero del Juego ===");
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    System.out.print(tabla[i][j] + " ");
+                    if (j < 2) System.out.print("| ");
+                }                   
+                System.out.println();	                
+                if (i < 2) System.out.println("----------"); // He añadido un separador entre filas
+	      }  
+        }
+      }
 	}
-}
