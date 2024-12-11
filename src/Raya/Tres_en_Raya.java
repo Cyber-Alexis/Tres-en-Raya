@@ -44,11 +44,22 @@ public class Tres_en_Raya {
                 System.out.println();	                
                 if (i < 2) System.out.println("----------"); // He añadido un separador entre filas
             }
-        
-            String player = turno == 1 ? j1 : j2;     
+    
+            String jugador = turno == 1 ? j1 : j2;     
             char fichaActual = turno == 1 ? 'X' : 'O';      
-            System.out.println("¡Le toca a " + player + "!"); 
-        
+            System.out.println("¡Le toca a " + jugador + "!"); 
+                
+            // Aqui pedire y comprobare el movimiento de cada jugador            
+            int fila, columna;           
+            do {               
+            	System.out.print("Dime una fila (0 - 2): ");               
+            	fila = x.nextInt();
+                System.out.print("Ahora dime una columna (0 - 2): ");
+                columna = x.nextInt();         
+            } while (fila < 0 || fila >= 3 || columna < 0 || columna >= 3 || tabla[fila][columna] != '-');
+
+            tabla[fila][columna] = fichaActual;
+            jugadas++;
        }
 	}
 }
