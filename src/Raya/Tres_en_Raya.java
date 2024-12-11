@@ -74,6 +74,19 @@ public class Tres_en_Raya {
             } else {
                 turno = (turno == 1) ? 2 : 1; // Cambiaremos turno
             }       
-       }
+        }
+        
+        // Aqui mostrare el resultado        
+        System.out.println("\n=== Tablero Final ===");       
+        for (int i = 0; i < 3; i++) {           
+        	for (int j = 0; j < 3; j++) {                
+        		System.out.print(tabla[i][j] + " ");              
+        		if (j < 2) System.out.print("| "); // Añado separadores entre columnas
+            }
+            System.out.println();
+            if (i < 2) System.out.println("----------"); // Añado separador entre filas
+                  
+        }
+        
 	}
 }
