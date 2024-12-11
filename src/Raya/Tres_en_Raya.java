@@ -84,9 +84,15 @@ public class Tres_en_Raya {
         		if (j < 2) System.out.print("| "); // Añado separadores entre columnas
             }
             System.out.println();
-            if (i < 2) System.out.println("----------"); // Añado separador entre filas
-                  
-        }
-        
-	}
+            if (i < 2) System.out.println("----------"); // Añado separador entre filas	
+        }      
+            if (ganador == 1) {
+                System.out.println("¡El " + j1 + " ha ganado la partida!");
+            } else if (ganador == 2) {
+                System.out.println("¡El " + j2 + " ha ganado la partida!");
+            } else {
+                System.out.println("¡Vaya, habéis empatado!");
+            }
+            
+	}     
 }
