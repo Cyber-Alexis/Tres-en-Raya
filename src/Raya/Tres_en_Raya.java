@@ -43,7 +43,12 @@ public class Tres_en_Raya {
                 }                   
                 System.out.println();	                
                 if (i < 2) System.out.println("----------"); // He añadido un separador entre filas
-	      }  
-        }
-      }
+            }
+        
+            String player = turno == 1 ? j1 : j2;     
+            char fichaActual = turno == 1 ? 'X' : 'O';      
+            System.out.println("¡Le toca a " + player + "!"); 
+        
+       }
 	}
+}
