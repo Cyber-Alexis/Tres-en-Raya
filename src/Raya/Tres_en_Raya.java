@@ -60,6 +60,20 @@ public class Tres_en_Raya {
 
             tabla[fila][columna] = fichaActual;
             jugadas++;
+            
+            // Esta parte se encargara de verificar si hay ganador
+            if ((tabla[0][0] == fichaActual && tabla[0][1] == fichaActual && tabla[0][2] == fichaActual) ||
+                (tabla[1][0] == fichaActual && tabla[1][1] == fichaActual && tabla[1][2] == fichaActual) ||
+                (tabla[2][0] == fichaActual && tabla[2][1] == fichaActual && tabla[2][2] == fichaActual) ||
+                (tabla[0][0] == fichaActual && tabla[1][0] == fichaActual && tabla[2][0] == fichaActual) ||
+                (tabla[0][1] == fichaActual && tabla[1][1] == fichaActual && tabla[2][1] == fichaActual) ||
+                (tabla[0][2] == fichaActual && tabla[1][2] == fichaActual && tabla[2][2] == fichaActual) ||
+                (tabla[0][0] == fichaActual && tabla[1][1] == fichaActual && tabla[2][2] == fichaActual) ||
+                (tabla[0][2] == fichaActual && tabla[1][1] == fichaActual && tabla[2][0] == fichaActual)) {
+                ganador = turno;
+            } else {
+                turno = (turno == 1) ? 2 : 1; // Cambiaremos turno
+            }       
        }
 	}
 }
