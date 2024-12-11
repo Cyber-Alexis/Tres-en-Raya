@@ -93,6 +93,14 @@ public class Tres_en_Raya {
             } else {
                 System.out.println("¡Vaya, habéis empatado!");
             }
-            
+                   
+            // Aqui hare la parte de la revancha          
+            System.out.print("¿Quereis jugar otra vez? (Si / No): ");
+            if (x.next().equalsIgnoreCase("Si")) {
+                main(args); // Reiniciar el juego
+            } else {
+                System.out.println("¡Hasta la próxima!");
+            }
+            x.close();
 	}     
 }
